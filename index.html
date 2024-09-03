@@ -1,48 +1,70 @@
 <!-- 
 npx tailwindcss -i ./input.css -o ./output.css --watch 
 -->
-
 <!doctype html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
-  <!-- FONT -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
-<body class="font-[poppins] bg-gradient-to-l from-custom-blue to-custom-orange h-screen">
-    <header class="bg-slate-200 ">
-      <nav class="flex justify-between items-center w-[90%] mx-auto">
-        <div>
-          <img class="h-8 my-4" src="https://hidoctor.health/images/Layout/Logo.svg" alt="">
+
+<body class="font-[Poppins] bg-white">
+    <header class="bg-white border-b border-slate-300">
+        <div class="bg-[#2061AC] min-h-[5vh]" >
+          <a  href="http://www.instagram.com" class="hover:cursor-pointer">
+            <div class="left-0 p-3 flex"><h1 class="text-white text-sm">'Daha iyi sen' icin ilk seansinin <h2 class="text-yellow-500 px-1 text-lg -mt-[0.8vh] font-semibold">%25</h2><h3 class="text-white text-sm">off for you! ></h3></h1></div>
+          </a>
         </div>
-        <div class="absolute -mb-[1vh] min-h-[60vh] left-0 top-[9%] w-full flex items-center px-5">
-          <ul class="flex md:flex-row gap-[4vw] items-center">
-            <li>
-              <a class="text-sm font-semibold" href="">Services</a>
-            </li>
-            <li>
-              <a class="text-sm font-semibold" href="">B2B Application</a>
-            </li>
-            <li>
-              <a class="text-sm font-semibold" href="">Blog</a>
-            </li>
-            <li>
-              <a class="text-sm font-semibold" href="">Tests</a>
-            </li>
-            <li>
-              <a class="text-sm font-semibold" href="">User Questions</a>
-            </li>
-          </ul>
-        </div>
-        <div class="grid grid-cols-3">
-          <img onclick="" class="w-8 bottom-2" src="https://www.reshot.com/preview-assets/icons/KFTJ3RNCB7/notification-bell-KFTJ3RNCB7.svg" alt="" >
-          <button class="px-4 py-2 bg-transparent border border-slate-400 text-sm rounded-full mr-2">Login</button>
-          <button class="px-4 py-2 bg-blue-700 text-sm text-white rounded-full">Register</button>
-        </div>
-      </nav>
+        <nav class="flex justify-between items-center py-6 w-[92%]  mx-auto">
+            <div>
+                <img class="w-[170px] cursor-pointer" src="https://hidoctor.health/images/Layout/Logo.svg" alt="...">
+            </div>
+            <div
+                class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Products</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Solution</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Resource</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Developers</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Pricing</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-[1vw]">
+                <button class="bg-transparent text-xs px-4 py-2 border border-slate-400 rounded-full hover:bg-pink-600 duration-500 hover:text-white">Sign in</button>
+                <button class="bg-blue-600 text-white text-xs px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black duration-500">Sign in</button>
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+            </div>
     </header>
 
+
+
+    <script>
+        const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e){
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[9%]')
+        }
+    </script>
+    <!-- FlowBite -->
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
 </body>
+
 </html>
