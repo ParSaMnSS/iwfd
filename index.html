@@ -18,42 +18,45 @@ npx tailwindcss -i ./input.css -o ./output.css --watch
 
 <body class="font-[Poppins] bg-white">
     <header class="bg-white border-b border-slate-300">
-        <div class="bg-[#2061AC] min-h-[5vh]" >
+        <div class="bg-[#2061AC] min-h-[3vh]" >
           <a  href="http://www.instagram.com" class="hover:cursor-pointer">
             <div class="left-0 p-3 flex"><h1 class="text-white text-sm">'Daha iyi sen' icin ilk seansinin <h2 class="text-yellow-500 px-1 text-lg -mt-[0.8vh] font-semibold">%25</h2><h3 class="text-white text-sm">off for you! ></h3></h1></div>
           </a>
         </div>
-        <nav class="flex justify-between items-center py-6 w-[92%]  mx-auto">
+        <nav class="flex justify-between items-center py-6 w-[80%]  mx-auto">
             <div>
                 <img class="w-[170px] cursor-pointer" src="https://hidoctor.health/images/Layout/Logo.svg" alt="...">
             </div>
-            <div
-                class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
-                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+            <div class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:-mb-4 md:gap-[4vw] gap-8">
                     <li>
-                        <a class="hover:text-gray-500" href="#">Products</a>
+                        <a class="text-sm font-semibold" href="#">Products</a>
                     </li>
                     <li>
-                        <a class="hover:text-gray-500" href="#">Solution</a>
+                        <a class="text-sm font-semibold" href="#">Solution</a>
                     </li>
                     <li>
-                        <a class="hover:text-gray-500" href="#">Resource</a>
+                        <a class="text-sm font-semibold" href="#">Resource</a>
                     </li>
                     <li>
-                        <a class="hover:text-gray-500" href="#">Developers</a>
+                        <a class="text-sm font-semibold" href="#">Developers</a>
                     </li>
                     <li>
-                        <a class="hover:text-gray-500" href="#">Pricing</a>
+                        <a class="text-sm font-semibold" href="#">Pricing</a>
                     </li>
                 </ul>
             </div>
-            <div class="flex items-center gap-[1vw]">
+            <div class="flex items-center md:-mb-4 gap-[1vw]">
                 <button class="bg-transparent text-xs px-4 py-2 border border-slate-400 rounded-full hover:bg-pink-600 duration-500 hover:text-white">Sign in</button>
                 <button class="bg-blue-600 text-white text-xs px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black duration-500">Sign in</button>
                 <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
             </div>
     </header>
 
+    <div class="bg-[#236ABD] md:mx-[10vw]  mt-6 px-4 py-4 relative rounded-2xl">
+      <h1 class="text-white text-[12px] text-center md:block hidden">Gelecek seansını hemen oluşturmak ister misin?</h1>
+      <h2 class="text-white text-[12px] text-center font-semibold mx-auto px-1">En son incelediğin uzmanlar</h2>
+    </div>
 
 
     <script>
